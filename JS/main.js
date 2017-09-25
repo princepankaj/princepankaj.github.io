@@ -122,7 +122,7 @@ $(document).ready(function() {
             var index = Math.floor(Math.random() * 22);
             console.log(index);
             var source = document.getElementById('video-source');
-            source.setAttribute('src', 'media/background-' + index + '.mp4');
+            source.setAttribute('src', 'Media/background-' + index + '.mp4');
 
             video.load();
             video.play();
