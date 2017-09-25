@@ -101,7 +101,7 @@ $(document).ready(function() {
     ];
     var interval = window.setInterval(function() {
         changeBackgroundVideo();
-    }, 30000);
+    }, 500000);
     //     var interval2 = window.setInterval(function(){
     //        $("#my-video").animate({
     //   opacity: 0.1
