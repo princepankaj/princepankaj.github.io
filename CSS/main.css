@@ -12,7 +12,7 @@ body {
 	transition: all 2s ease-in-out;
 	text-shadow: 0 3px 3px rgba(0, 0, 0, 0.6), 0 6px 6px rgba(0, 0, 0, 1), 0 8px 8px rgba(0, 0, 0, 1);
 	overflow: hidden;
-	/* background: url(Images/background.jpg) no-repeat; */
+	/* background: url(../Images/background.jpg) no-repeat; */
 }
 
 /* ================================= COTNENT ================================= */
@@ -112,51 +112,51 @@ body {
 }
 
 #btnHome {
-	background: url(Images/home.png) no-repeat top;
+	background: url(../Images/home.png) no-repeat top;
 	background-color: #2196f3;
 }
 
 #btnExperience {
-	background: url(Images/experience.png) no-repeat top;
+	background: url(../Images/experience.png) no-repeat top;
 	margin-top: 40px;
 	background-color: #ffc107;
 }
 
 #btnExpertise {
-	background: url(Images/expertise.png) no-repeat top;
+	background: url(../Images/expertise.png) no-repeat top;
 	background-color: #DD2C00;
 }
 
 #btnAcademics {
-	background: url(Images/academic.png) no-repeat top;
+	background: url(../Images/academic.png) no-repeat top;
 	margin-top: 40px;
 	background-color: #1a237e;
 }
 
 #btnAwards {
-	background: url(Images/award.png) no-repeat top;
+	background: url(../Images/award.png) no-repeat top;
 	background-color: #D50000;
 }
 
 #btnHobbies {
-	background: url(Images/hobbies.png) no-repeat top;
+	background: url(../Images/hobbies.png) no-repeat top;
 	margin-top: 40px;
 	background-color: #009688;
 }
 
 #btnInspiration {
-	background: url(Images/inspiration.png) no-repeat top;
+	background: url(../Images/inspiration.png) no-repeat top;
 	background-color: #ff1744;
 }
 
 #btnBlog {
-	background: url(Images/blog.png) no-repeat top;
+	background: url(../Images/blog.png) no-repeat top;
 	margin-top: 40px;
 	background-color: #FF9800;
 }
 
 #btnContact {
-	background: url(Images/contact.png) no-repeat top;
+	background: url(../Images/contact.png) no-repeat top;
 	background-color: #00e676;
 }
 
@@ -529,7 +529,7 @@ body {
 .card {
 	display: inline-block;
 	width: 120px;
-	background: url(Images/tools2.png) no-repeat bottom;
+	background: url(../Images/tools2.png) no-repeat bottom;
 	height: 120px;
 	margin-left: 2%;
 	margin-top: 2%;
@@ -782,22 +782,22 @@ body {
 }
 
 #ac1 {
-	background: url(Images/cert-bg1.png);
+	background: url(../Images/cert-bg1.png);
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
 #ac2 {
-	background: url(Images/cert-bg2.png);
+	background: url(../Images/cert-bg2.png);
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
 #ac3 {
-	background: url(Images/cert-bg3.png);
+	background: url(../Images/cert-bg3.png);
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
 #ac4 {
-	background: url(Images/cert-bg4.png);
+	background: url(../Images/cert-bg4.png);
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -827,12 +827,12 @@ body {
 }
 
 #ad1 {
-	background: url(Images/aw-bg1.png);
+	background: url(../Images/aw-bg1.png);
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
 #ad2 {
-	background: url(Images/aw-bg2.png);
+	background: url(../Images/aw-bg2.png);
 	background-color: rgba(0, 0, 0, 0.7);
 	background-size: contain;
 }
@@ -842,7 +842,7 @@ body {
 }
 
 #ad3 {
-	background: url(Images/aw-bg3.png);
+	background: url(../Images/aw-bg3.png);
 	background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -851,7 +851,7 @@ body {
 }
 
 #ad4 {
-	background: url(Images/aw-bg4.png);
+	background: url(../Images/aw-bg4.png);
 	background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -860,12 +860,12 @@ body {
 }
 
 #ad5 {
-	background: url(Images/aw-bg5.png);
+	background: url(../Images/aw-bg5.png);
 	opacity: 0.9;
 }
 
 #car {
-	background: url(Images/my_car.png);
+	background: url(../Images/my_car.png);
 	width: 90%;
 	height: 80%;
 	margin-left: 5%;
@@ -878,7 +878,7 @@ body {
 }
 
 #ad6 {
-	background: url(Images/aw-bg6.png);
+	background: url(../Images/aw-bg6.png);
 	background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -1045,7 +1045,7 @@ body {
 	box-shadow: 0 0 6px black, 0 7px 4px black;
 	-webkit-box-shadow: 0 0 6px black, 0 7px 4px black;
 	transition: color 0.25s;
-	background: url(Images/social-bg.png);
+	background: url(../Images/social-bg.png);
 	background-size: contain;
 }
 
