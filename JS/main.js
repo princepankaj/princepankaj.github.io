@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     var count = 0;
     var materialColors = ['#F44336', '#FFEBEE', '#FFCDD2', '#EF9A9A', '#E57373', '#EF5350', '#F44336', '#E53935', '#D32F2F', '#C62828', '#B71C1C', '#FF8A80', '#FF5252',
         '#FF1744', '#D50000', '#E91E63', '#FCE4EC', '#F8BBD0', '#F48FB1', '#F06292', '#EC407A', '#E91E63', '#D81B60', '#C2185B', '#AD1457', '#880E4F', '#FF80AB', '#FF4081',
@@ -20,131 +20,83 @@ $(document).ready(function() {
         '#F5F5F5', '#EEEEEE', '#E0E0E0', '#BDBDBD', '#9E9E9E', '#757575', '#616161', '#424242', '#212121', '#607D8B', '#ECEFF1', '#CFD8DC', '#B0BEC5', '#90A4AE', '#78909C',
         '#607D8B', '#546E7A', '#455A64', '#37474F', '#263238', '#000000', '#FFFFFF'
     ];
-    var animations = ["bounce",
-        "flash",
-        "pulse",
-        "rubberBand",
-        "shake",
-        "headShake",
-        "swing",
-        "tada",
-        "wobble",
-        "jello",
-        "bounceIn",
-        "bounceInDown",
-        "bounceInLeft",
-        "bounceInRight",
-        "bounceInUp",
-        "bounceOut",
-        "bounceOutDown",
-        "bounceOutLeft",
-        "bounceOutRight",
-        "bounceOutUp",
-        "fadeIn",
-        "fadeInDown",
-        "fadeInDownBig",
-        "fadeInLeft",
-        "fadeInLeftBig",
-        "fadeInRight",
-        "fadeInRightBig",
-        "fadeInUp",
-        "fadeInUpBig",
-        "fadeOut",
-        "fadeOutDown",
-        "fadeOutDownBig",
-        "fadeOutLeft",
-        "fadeOutLeftBig",
-        "fadeOutRight",
-        "fadeOutRightBig",
-        "fadeOutUp",
-        "fadeOutUpBig",
-        "flip",
-        "flipInX",
-        "flipInY",
-        "flipOutX",
-        "flipOutY",
-        "lightSpeedIn",
-        "lightSpeedOut",
-        "rotateIn",
-        "rotateInDownLeft",
-        "rotateInDownRight",
-        "rotateInUpLeft",
-        "rotateInUpRight",
-        "rotateOut",
-        "rotateOutDownLeft",
-        "rotateOutDownRight",
-        "rotateOutUpLeft",
-        "rotateOutUpRight",
-        "hinge",
-        "jackInTheBox",
-        "rollIn",
-        "rollOut",
-        "zoomIn",
-        "zoomInDown",
-        "zoomInLeft",
-        "zoomInRight",
-        "zoomInUp",
-        "zoomOut",
-        "zoomOutDown",
-        "zoomOutLeft",
-        "zoomOutRight",
-        "zoomOutUp",
-        "slideInDown",
-        "slideInLeft",
-        "slideInRight",
-        "slideInUp",
-        "slideOutDown",
-        "slideOutLeft",
-        "slideOutRight",
-        "slideOutUp"
 
+    var animations = ["bounce", "flash", "pulse", "rubberBand", "shake", "headShake", "swing", "tada", "wobble", "jello", "bounceIn", "bounceInDown", "bounceInLeft", "bounceInRight", "bounceInUp",
+        "bounceOut", "bounceOutDown", "bounceOutLeft", "bounceOutRight", "bounceOutUp", "fadeIn", "fadeInDown", "fadeInDownBig", "fadeInLeft", "fadeInLeftBig", "fadeInRight", "fadeInRightBig",
+        "fadeInUp", "fadeInUpBig", "fadeOut", "fadeOutDown", "fadeOutDownBig", "fadeOutLeft", "fadeOutLeftBig", "fadeOutRight", "fadeOutRightBig", "fadeOutUp", "fadeOutUpBig", "flip", "flipInX",
+        "flipInY", "flipOutX", "flipOutY", "lightSpeedIn", "lightSpeedOut", "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight", "rotateOut", "rotateOutDownLeft",
+        "rotateOutDownRight", "rotateOutUpLeft", "rotateOutUpRight", "hinge", "jackInTheBox", "rollIn", "rollOut", "zoomIn", "zoomInDown", "zoomInLeft", "zoomInRight", "zoomInUp", "zoomOut", "zoomOutDown",
+        "zoomOutLeft", "zoomOutRight", "zoomOutUp", "slideInDown", "slideInLeft", "slideInRight", "slideInUp", "slideOutDown", "slideOutLeft", "slideOutRight", "slideOutUp"
     ];
-    var interval = window.setInterval(function() {
-        changeBackgroundVideo();
-    }, 500000);
-    //     var interval2 = window.setInterval(function(){
-    //        $("#my-video").animate({
-    //   opacity: 0.1
-    // }, 1000);},
 
-    //     18000);
+    animateWelcomeMessage();
+    var currentVideoFileIndex = 0;
+    var videoFileIndexSize = 34;
 
-    function changeBackgroundVideo() {
-        // $("#my-video").css({display:'none'});
-        console.log("trace");
+    //Video playback control start
+
+    $("#btnPause").click(function () {
+        var video = document.getElementById('my-video');
+        video.pause();
+    });
+
+    $("#btnPlay").click(function () {
+        var video = document.getElementById('my-video');
+        video.play();
+    });
+
+    $("#btnPrev").click(function () {
+        changeBackgroundVideo("prev");
+    });
+
+    $("#btnNext").click(function () {
+        changeBackgroundVideo("next");
+    });
+
+    function changeBackgroundVideo(message) {
+        var video = document.getElementById('my-video');
         $("#my-video").animate({
-            opacity: 0.1
+            opacity: 0.8
         }, 2000);
-        setTimeout(function() {
-
-            var video = document.getElementById('my-video');
-            video.pause();
-            var index = Math.floor(Math.random() * 22);
-            console.log(index);
+        if (message === "prev") {
+            currentVideoFileIndex--;
+            if (currentVideoFileIndex < 0) {
+                currentVideoFileIndex = videoFileIndexSize;
+            }
+        } else if (message === "next") {
+            currentVideoFileIndex++;
+            if (currentVideoFileIndex > videoFileIndexSize) {
+                currentVideoFileIndex = 0;
+            }
+        }
+        setTimeout(function () {
+            // var index = Math.floor(Math.random() * 42);
+            console.log(currentVideoFileIndex);
             var source = document.getElementById('video-source');
-            source.setAttribute('src', 'Media/background-' + index + '.mp4');
+            source.setAttribute('src', 'Media/background-' + currentVideoFileIndex + '.mp4');
 
             video.load();
             video.play();
-            //  $("#my-video").css({display:'block'});
 
-            $("#my-video").css('opacity', 0.1).animate({
+            $("#my-video").css('opacity', 0.8).animate({
                 opacity: 1
-            }, 1000);
-        }, 2000);
+            }, 3000);
+        }, 1000);
     }
+    //Video playback control end
 
     var animationInterval;
-    animate();
-    //get the welcome msg element
-    function animate() {
+
+    function animateWelcomeMessage() {
+
         var $all_msg = $('#welcome_msg');
         //get a list of letters from the welcome text
         var $wordList = $('#welcome_msg').text().split("");
         //clear the welcome text msg
         $('#welcome_msg').text("");
+        $('#welcome_msg').fadeIn();
         //loop through the letters in the $wordList array
-        $.each($wordList, function(idx, elem) {
+        $.each($wordList, function (idx, elem) {
             //create a span for the letter and set opacity to 0
             var newEL = $("<span/>").text(elem).css({
                 opacity: 0
@@ -152,110 +104,59 @@ $(document).ready(function() {
             //append it to the welcome message
             newEL.appendTo($all_msg);
             //set the delay on the animation for this element
-            newEL.delay(idx * 50);
+            newEL.delay(idx * 10);
             //animate the opacity back to full 1
             newEL.animate({
                 opacity: 1
             }, 1000);
         });
     }
-    //displayAwardsSection();
-    function displayAwardsSection() {
-        var elements = $('#awards ul li p');
-        //get a list of letters from the welcome text
-        // var $wordList = $('#awards').text().split("");
-        //clear the welcome text msg
-        //$('#awards').text("");
-        //loop through the letters in the $wordList array
-        $.each(elements, function(idx, element) {
-            $(element).css("visibility", "visible");
-            var index = Math.floor(Math.random() * materialColors.length);
-            // $(element).css("color", materialColors[index]);
-            var text = $(element).text().split("");
 
-            $(element).text("");
-            $.each(text, function(idx, ele) {
-                
-                //create a span for the letter and set opacity to 0
-                var newEL = $("<span/>").text(ele).css({
-                    opacity: 1
-                });
-                newEL.appendTo(element);
-                // newEL.css('animation', 'zoomIn 20s');
-                //animate the opacity back to full 1
-                // newEL.animate({
-                //     opacity: 1
-                // }, 1000);
+    function animateHobbies() {
+        var index = Math.floor(Math.random() * animations.length);
+        var elements = $('#hobbiesList').children();
+        $.each(elements, function (idx, element) {
+            // var x = Math.floor(Math.random() * 1400);
+            // var y = Math.floor(Math.random() * 350);
+            //var randomColor = Math.floor(Math.random()*16777215).toString(16);
+            var indexColor = Math.floor(Math.random() * materialColors.length);
+            $(element).css({
+                backgroundColor: materialColors[indexColor]
             });
-
         });
     }
 
     function hideEverything() {
-        $('#welcome_msg').fadeOut();
-        $('#expertise').fadeOut();
-        $('#experience').fadeOut();
-        $('#hobbies').fadeOut();
-        $('#carousel').fadeOut();
-        $('#carousel2').fadeOut();
-        $('#awards').fadeOut();
-        $('#awards-main-holder').fadeOut();
+        $('#welcome_msg').hide();
+        $('#expertise').hide();
+        $('#experience').hide();
+        $('#hobbies').hide();
+        $('#carousel').hide();
+        $('#carousel2').hide();
+        $('#awards').hide();
+        $('#contact').hide();
+        $('#academics').hide();
+        $('#blog').hide();
+        $('#inspiration').hide();
+        $('#btnContainer li').removeClass('active-button');
+        $('#btnContainer li').addClass('button');
+        clearInterval(interval2);
+
         if (animationInterval != undefined) {
             clearInterval(animationInterval);
         }
     }
-
-    function animateHobbies() {
-        var index = Math.floor(Math.random() * animations.length);
-
-        var elements = $('#hobbiesList').children();
-        $.each(elements, function(idx, element) {
-            var x = Math.floor(Math.random() * 1600);
-
-            var y = Math.floor(Math.random() * 500);
-            //var randomColor = Math.floor(Math.random()*16777215).toString(16);
-            var indexColor = Math.floor(Math.random() * materialColors.length);
-            $(element).css({
-                left: x,
-                top: y,
-                position: 'absolute',
-                backgroundColor: materialColors[indexColor],
-                animation: 'pulsenew',
-                animationDuration: '3s',
-                animationIterationCount: 'infinite',
-                animationDirection: 'alternate'
-
-            });
-        });
-    }
-
-    function animateTools() {
-        var index = Math.floor(Math.random() * animations.length);
-
-        var elements = $('#tools-container').children();
-        $.each(elements, function(idx, element) {
-            var x = Math.floor(Math.random() * 1400);
-
-            var y = Math.floor(Math.random() * 500);
-            //var randomColor = Math.floor(Math.random()*16777215).toString(16);
-            var indexColor = Math.floor(Math.random() * materialColors.length);
-            $(element).css({
-                //left: x,
-                //top: y,
-                //position:'absolute',
-                //backgroundColor:materialColors[indexColor],
-                //animation:'pulsenew',
-                //animationDuration:'3s',
-                //animationIterationCount:'infinite',
-                //animationDirection: 'alternate'
-
-            });
-        });
-    }
-    
-    $('#btnContainer li').click(function() {
+    $('#btnContainer li').click(function () {
         hideEverything();
+        $(this).removeClass('button');
+        $(this).addClass('active-button');
         if (this.id === 'btnHome') {
+            var elements = $('#welcome_msg').children();
+            $.each(elements, function (idx, element) {
+                $(element).css({
+                    color: '#ffffff'
+                });
+            });
             $('#welcome_msg').fadeIn();
         } else if (this.id === 'btnExpertise') {
             $('#expertise').fadeIn();
@@ -266,7 +167,7 @@ $(document).ready(function() {
         } else if (this.id === 'btnExperience') {
             $('#projectList').siblings().hide();
             $('#experience').fadeIn();
-            $('#project-fg-desc').fadeIn();
+            $('#project-dell-desc').fadeIn();
 
         } else if (this.id === 'btnHobbies') {
             $('#hobbies').fadeIn();
@@ -274,20 +175,38 @@ $(document).ready(function() {
             if (animationInterval != undefined) {
                 clearInterval(animationInterval);
             }
-            animationInterval = window.setInterval(function() {
+            animationInterval = window.setInterval(function () {
                 animateHobbies();
-            }, 10000);
+            }, 3000);
         } else if (this.id === 'btnAwards') {
             $('#awards').fadeIn();
-            $('#awards-main-holder').fadeIn();
-            displayAwardsSection();
-
+        } else if (this.id === 'btnAcademics') {
+            $('#academics').fadeIn();
+        } else if (this.id === 'btnBlog') {
+            $('#blog').fadeIn();
+        } else if (this.id === 'btnInspiration') {
+            $('#inspiration').fadeIn();
         }
-
+        else if (this.id === 'btnContact') {
+            $('#contact').fadeIn();
+            var element = $('#photo');
+            var randomColor1 = Math.floor(Math.random() * materialColors.length);
+            var randomColor2 = Math.floor(Math.random() * materialColors.length);
+            var randomColor3 = Math.floor(Math.random() * materialColors.length);
+            $(element).css({
+                background: 'linear-gradient(' + materialColors[randomColor1] + ',' + materialColors[randomColor2]
+                    + ',' + materialColors[randomColor3] + ')'
+            });
+        }
     });
-    $('#projectList li').click(function() {
+
+    $('#projectList li').click(function () {
         $(this).parent().siblings().hide();
-        if (this.id === 'project-fg') {
+        if (this.id === 'project-dell') {
+            $('#project-dell-desc').fadeIn();
+        } else if (this.id === 'project-ms') {
+            $('#project-ms-desc').fadeIn();
+        } else if (this.id === 'project-fg') {
             $('#project-fg-desc').fadeIn();
         } else if (this.id === 'project-cdp') {
             $('#project-cdp-desc').fadeIn();
@@ -300,63 +219,97 @@ $(document).ready(function() {
         }
 
     });
-    $('#expertise-list li').click(function() {
+
+    var colorArray = [
+        "#f44336", "#E91E63", "#9C27B0", "#673AB7", "#3F51B5", "#2196F3", "#03A9F4", "#00BCD4", "#009688", "#4CAF50", "#8BC34A",
+        "#CDDC39", "#FFEB3B", "#FFEB3B", "#FFC107", "#FF9800", "#FF5722", "#795548", "#607D8B", "#000000", "#FFFFFF"];
+
+    $('#expertise-list li').click(function () {
         $(this).parent().siblings().hide();
         if (this.id === 'e-language') {
             $('#pl-container').fadeIn();
-            $('#carousel').fadeIn();
-            $('#carousel2').fadeIn();
         } else if (this.id === 'e-os') {
             $('#os-container').fadeIn();
-            $('#carousel').fadeIn();
-            $('#carousel2').fadeIn();
         } else if (this.id === 'e-tools') {
             $('#tools-container').fadeIn();
-            $('#carousel').fadeOut();
-            $('#carousel2').fadeOut();
-            if (animationInterval != undefined) {
-                clearInterval(animationInterval);
-            }
-            animationInterval = window.setInterval(function() {
-                animateTools();
-            }, 10000);
-            // animateTools();       
+            var elements = $('.card');
+            $.each(elements, function (idx, element) {
+                var randomColor = Math.floor(Math.random() * materialColors.length);
+                $(element).css({
+                    backgroundColor: materialColors[randomColor]
+                });
+            });
         } else if (this.id === 'e-framework') {
             $('#frameworks-container').fadeIn();
-            $('#carousel').fadeIn();
-            $('#carousel2').fadeIn();
-        }
-
-    });
-
-
-    $('#welcome_msg').click(function() {
-        count++;
-        var index = Math.floor(Math.random() * animations.length);
-        if (count == 3) {
-            count = 0;
-            animate();
-            return;
-
-        }
-        var elements = $(this).children();
-        $.each(elements, function(idx, element) {
-            var x = Math.floor(Math.random() * 1800);
-
-            var y = Math.floor(Math.random() * 600);
-            var randomColor = Math.floor(Math.random() * 16777215).toString(16);
-            $(element).css({
-                left: x,
-                top: y,
-                position: 'absolute',
-                color: randomColor,
-                /* animation:animations[index],
-                animationDuration:'8s',
-                animationIterationCount: '4' */
-
+            var elements = $('.middle');
+            var randomColor = Math.floor(Math.random() * colorArray.length);
+            //var randomColor2 = Math.floor(Math.random() * colorArray.length);
+            $.each(elements, function (idx, element) {
+                $(element).css({
+                    backgroundColor: colorArray[randomColor]
+                });
+                $(element).prev().css({
+                    borderBottom: "30px solid" + colorArray[randomColor]
+                });
+                $(element).next().css({
+                    borderTop: "30px solid" + colorArray[randomColor]
+                });
             });
-
-        });
+        }
+        $('#carousel').fadeIn();
+        $('#carousel2').fadeIn();
     });
 
+    var animateFlag = true;
+    var interval2;
+
+    $('#welcome_msg').click(function () {
+        if (animateFlag) {
+            animateText();
+            interval2 = window.setInterval(animateText, 3000);
+        } else {
+            clearInterval(interval2);
+            interval2 = 0;
+            var elements = $('#welcome_msg').children();
+            $.each(elements, function (idx, element) {
+                $(element).css({
+                    color: '#ffffff'
+                });
+            });
+        }
+        animateFlag = !animateFlag;
+    });
+
+    function animateText() {
+        var index = Math.floor(Math.random() * animations.length);
+        var elements = $('#welcome_msg').children();
+        var randomColor = Math.floor(Math.random() * materialColors.length);
+        $.each(elements, function (idx, element) {
+            $(element).css({
+                color: materialColors[randomColor]
+            });
+        });
+    }
 });
+
+
+function displayMessage(message) {
+    $('.message').hide();
+    $('.message p').hide();
+    if (message == 'whatsapp') {
+        $('#left-message').show();
+        $('#whatsapp').fadeIn('fast').delay(2000).fadeOut('fast');
+    } else if (message == 'contactNo') {
+        $('#left-message').show();
+        $('#contactNo').fadeIn('fast').delay(2000).fadeOut('fast');
+    } else if (message == 'facebook') {
+        $('#right-message').show();
+        $('#facebook').fadeIn('fast').delay(2000).fadeOut('fast');
+    } else if (message == 'gmail') {
+        $('#right-message').show();
+        $('#gmail').fadeIn('fast').delay(2000).fadeOut('fast');
+    } else if (message == 'location') {
+        $('#right-message').show();
+        $('#location').fadeIn('fast').delay(2000).fadeOut('fast');
+    }
+}

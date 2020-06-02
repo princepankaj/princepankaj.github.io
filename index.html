@@ -1,137 +1,293 @@
 <html>
-   <head>
-      <title>
-         My Portfolio
-      </title>
-      <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Berkshire+Swash" />
-      <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Pacifico" /> -->
-      <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Aladin" rel="stylesheet">
-      <link rel="stylesheet" href="/CSS/main.css">
-      <link rel="stylesheet" href="/CSS/animate.css">
-  
-      <script type="text/javascript" src="/JS/jquery-3.2.1.js"></script>
-      <script type="text/javascript" src="/JS/main.js"></script>
-   </head>
-   <body>
-       <div class = 'video'>
-      <video id="my-video" class = "vid" autoplay="autoplay" loop="loop" muted="muted">
-         <source src="/Media/background-0.mp4" type="video/mp4" id = "video-source" />
+
+<head>
+   <title>
+      Pankaj's Portfolio
+   </title>
+
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+   <!-- <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet"> -->
+   <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Aladin" rel="stylesheet">
+   <!-- <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"> -->
+   <!-- <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet"> -->
+   <!-- <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet"> -->
+
+   <link rel="stylesheet" href="/CSS/main.css">
+   <link rel="stylesheet" href="/CSS/animate.css">
+
+   <script type="text/javascript" src="/JS/jquery-3.5.1.min.js"></script>
+   <script type="text/javascript" src="/JS/main.js"></script>
+</head>
+
+<body>
+   <div class='video'>
+      <video id="my-video" class="vid" autoplay="autoplay" loop="loop" muted="muted">
+         <source src="/Media/background-0.mp4" type="video/mp4" id="video-source" />
       </video>
-       </div>
-      <div class = "content">
-      <ul id = "btnContainer">
-         <li id = "btnHome">
+   </div>
+
+   <div class="content">
+
+      <ul id="btnContainer">
+         <li id="btnHome">
             Home
          </li>
-         <li id = "btnExperience">
+         <li id="btnExperience">
             Experience
          </li>
-         <li id = "btnExpertise">
+         <li id="btnExpertise">
             Expertise
          </li>
-         <li id = "btnAcademics">
+         <li id="btnAcademics">
             Academics
          </li>
-         <li id = "btnAwards" style="padding-top:45px;" >
+         <li id="btnAwards" style="padding-top:45px;">
             Awards & Recognition
          </li>
-         <li id = "btnHobbies">
+         <li id="btnHobbies">
             Hobbies
          </li>
-         <li id = "btnInspiration">
+         <li id="btnInspiration">
             Inspiration
          </li>
-         <li id = "btnBlog">
+         <li id="btnBlog">
             Blog
          </li>
-         <li id = "btnContact">
+         <li id="btnContact">
             Contact
          </li>
       </ul>
-      <div id= "welcome_msg" class = "main-container">
-         Hello there, Welcome to My Portfolio. I am Pankaj. A passionate developer, tech enthusiast and geek :). I have 3+ years of development experience in Java, C# 
-         and other web technologies. Currently working for 
-         SAP Labs, Bangalore. I love to explore new Technologies, Gadgets and User Interfaces. Facinated by Machine Learning specially Deep Learning and in love with 3D appearance & animation.
-         I love working on challenging projects. An optimization freak. Strong supporter of AI and automation, specifically Autonomous driving. Die hard fan of Iron man.
-         This project is still in beta and for experimental purpose.
+      <div id="welcome_msg" class="main-container" style="display:none">
+         Hello!! Welcome to my Portfolio. A Quick intro.. I am Pankaj, a passionate developer, tech enthusiast and geek
+         :).
+         I have 6+ years of development experience in Java, Spring, Springboot and other web technologies.
+         Currently working for Dell EMC, Bangalore. I have completed my Master's degree in computers from KIIT
+         Unversity. Please
+         visit expertise section for my career details.
+         I like to do Problem solving on LeetCode, HackerRank, CodeChef etc. in my free time.
+         I love to explore latest trends in Technology, Gadgets and Dev Tech.
+         Fascinated by Machine Learning especially Deep Learning. I love animations (Getting my hands dirty with CSS3
+         animations).
+         I like working on challenging projects.
+         An optimization freak. Oh!! Did I mention that I am a die hard fan of Iron man specially Jarvis.
+         A true knowledge seeker (Thanks to
+         Quora and Reddit). YouTube is my goto app for videos for tech, design, news, music, inspiration, architectures
+         etc. (their recommendation system is one of the best).
+         Music is therapy for me. I like most of the music generes from Rock, Pop, Blues, Bollywood to Hip-Hop.
+         I am crazy about cars and bikes. My favourite car is BMW M5 sports edition and bike is Yamaha R6.
+         A diecast collector, visit hobbies section for more surprises.
+         I believe in learning and growing every day. I get inspiration from Quotes, Books, TV series, Movies and
+         Documentaries.
+         I like reading magazines. My favourite magazines: Digit, Wired, Computer active, PCWorld, WebUser, PC Magazine,
+         Popular Science, Stuff,
+         PC.com, APC, PC gamer, How Stuff Works, Autocar, autox, Topcar, PC Pro, Car & Bikes.
+         This project is still in beta and for experimental purpose. Best viewed in full screen.
       </div>
-        <div id = 'carousel' style="display:none">
-               <ul class = "language-icon-set">
-               <!-- id = 'langauge-icons-carousel'> -->
-                  <li>
-                     <img src = "/Images/algo.png" class= "langauge-icon"/>
-                  </li>
-                  <li>
-                     <img src = "/Images/android.png" class= "langauge-icon"/>
-                  </li>
-                  <li>
-                     <img src = "/Images/angular.png" class= "langauge-icon"/>
-                  </li>
-                  <li>
-                     <img src = "/Images/c.png" class= "langauge-icon"/>
-                  </li>
-                  <li>
-                     <img src = "/Images/cpp.png" class= "langauge-icon"/>
-                  </li>
-                  <li>
-                     <img src = "/Images/c-sharp.png" class= "langauge-icon"/>
-                  </li>
-                  <li>
-                     <img src = "/Images/css.png" class= "langauge-icon"/>
-                  </li>
-                  <li>
-                     <img src = "/Images/ds2.jpg" class= "langauge-icon"/>
-                  </li>
-                  <li>
-                     <img src = "/Images/html.png" class= "langauge-icon"/>
-                  </li>
-               </ul>
-            </div>
-            <div id = 'carousel2' style="display:none">
-               <ul class = "language-icon-set">
-               <!-- id = 'langauge-icons-carousel'> -->
-                  <li>
-                     <img src = "/Images/java.png" class= "langauge-icon"/>
-                  </li>
-                  <li>
-                     <img src = "/Images/javascript.png" class= "langauge-icon"/>
-                  </li>
-                  <li>
-                     <img src = "/Images/jquery.png" class= "langauge-icon"/>
-                  </li>
-                  <li>
-                     <img src = "/Images/ml2.png" class= "langauge-icon"/>
-                  </li>
-                  <li>
-                     <img src = "/Images/php2.png" class= "langauge-icon"/>
-                  </li>
-                  <li>
-                     <img src = "/Images/python.png" class= "langauge-icon"/>
-                  </li>
-                  <li>
-                     <img src = "/Images/react.png" class= "langauge-icon"/>
-                  </li>
-                  <li>
-                     <img src = "/Images/sql.png" class= "langauge-icon"/>
-                  </li>
-                  <li>
-                     <img src = "/Images/system.png" class= "langauge-icon"/>
-                  </li>
-               </ul>
-            </div>
-      <div id = "expertise" class = "main-container" style="display:none">
-         <ul id = 'expertise-list'>
-            <li class = 'btn btn-1'id = 'e-language'>Programming Languages</li>
-            <li class = 'btn btn-2' id = 'e-os'>Operating System</li>
-            <li class = 'btn btn-3' id = 'e-tools'>Tools</li>
-            <li class = 'btn btn-4' id = 'e-framework'>Frameworks</li>
+
+      <div id="experience" class="main-container" style="display:none">
+         <ul id='projectList'>
+            <li id='project-dell'>
+               <img src="/Images/dell_emc.png" class="img" />
+               <br />
+               Dell EMC
+               <br />
+               Power Protect Data Manager<br />
+               May 2020 - Present
+            </li>
+            <li id='project-ms'>
+               <img src="/Images/morgan-stanley-logo.png" class="img" />
+               <br />Morgan Stanley (Wissen)<br />
+               PWM Australia<br />
+               August 2018 - April 2020
+            </li>
+            <li id='project-fg'>
+               <img src="/Images/SAP_logo.png" class="img" />
+               <br />
+               Fieldglass VMS<br />
+               SAP Labs<br />
+               Jan 2016 - August 2018
+            </li>
+            <li id='project-cdp'>
+               <img src="/Images/infosys.png" class="img" />
+               <br />
+               CDP Workflow<br />
+               Infosys Limited<br />
+               Feb 2015 - Nov 2015
+            </li>
+            <li id='project-di'>
+               <img src="/Images/infosys.png" class="img" />
+               <br />
+               Document Indexing<br />
+               Infosys Limited<br />
+               Oct 2014 - Jan 2015
+            </li>
+            <li id='project-ewm'>
+               <img src="/Images/infosys.png" class="img" />
+               <br />
+               E-Commerce Warehouse Management<br />
+               Infosys Limited<br />
+               April 2014 - May 2014
+            </li>
+            <li id='project-kiit'>
+               <img src="/Images/Kiit_logo.png" class="img" />
+               <br />
+               Automated Attendance Management System<br />
+               KIIT University<br />
+               Semester Project
+            </li>
          </ul>
-         <div id = 'pl-container'  style="display:none">
-            
-            <div id = "graph">
-               <ul class = "y-axis">
+         <div id='project-dell-desc' class='project-container'>
+            Project Name : Power Protect Data Manager<br />
+            Description : A popular cloud based Storage solution that provides
+            a data protection solution that enables application-consistent backups and restores and
+            that is always available for Kubernetes workloads, VMware hybrid cloud environments, and Tanzu modern
+            applications.
+            <br />Role: Requirement analysis, Module development<br />
+            Architectural changes, Performance improvement, Resolving bugs<br />
+            Technologies: Java, J2EE, Rest API, Web Services, Spring, Kubernetets, Docker, Istio, AWS<br />
+            Company : Dell EMC<br /> Duration : May 2020 - Present<br />
+         </div>
+         <div id='project-ms-desc' class='project-container'>
+            Project Name : PWM Australia<br />
+            Description : Morgan Stanley’s Australian private wealth management website used by Financial Advisors and
+            high net worth clients.
+            <br />Role: Requirement analysis, Design and development of new features requested by users.
+            <br /> Performance optimizations of different projects based on various statistics to improve user
+            experience.
+            <br /> Implemented architectural design to improve security of the application based on OWASP guidelines.
+            <br /> Used Sonar/FindBugs to improve the code quality with 95% test coverage and 0 bugs and code smells.
+            <br /> Developed a RESTful application for public website’s analytics display with trending UI and charts.
+            <br /> Worked on planning and adoption of GIT for various projects to adapt latest industry standards.
+
+            .<br />
+            Technologies: Java, J2EE, Rest API, Web Services, Spring, JQuery, DBArtisan, Swagger, Springboot, Git,
+            Jenkins<br />
+            Company : Morgan Stanley<br /> Duration : August 2018 - April 2020<br />
+         </div>
+         <div id='project-fg-desc' class='project-container'>
+            Project Name : Fieldglass VMS<br />
+            Description : A popular cloud based Vendor Management System based on J2EE with Struts Framework combined
+            with customized Hibernate.
+            <br />Role: Requirement analysis, Business case development, Module development<br />
+            Architectural changes, Performance improvement, Resolving bugs<br />
+            Business understanding, Development of Analytical & Reporting tools<br />
+            Build monitoring, Business case presentations, Strong deadline adherence
+            .<br />
+            Technologies: Java, J2EE, Rest API, Web Services, HTML, CSS3, JQuery, JavaScript, Struts, Hibernate<br />
+            Company : SAP Labs<br /> Duration : Jan 2016 - Present<br />
+         </div>
+         <div id='project-cdp-desc' class='project-container' style="display:none">
+            Project Name : CDP Workflow<br />
+            Description : It provides a workflow to ease the process of document approval for insurance.<br /> Reads all
+            details from email using Exchange API and connects to SharePoint System for processing<br />
+            Role: Requirement analysis, Architectural design and Development<br />
+            Client side scripting with SharePoint Web APIs, Email & Attachment processing with Exchange API<br />
+            Regular client interactions, presentations and demos<br />
+            Technologies: C#, Rest API, HTML, CSS3, JQuery, JavaScript, SharePoint<br />
+            Company : Infosys Limited<br /> Duration : Feb 2015 - Nov 2015<br />
+         </div>
+         <div id='project-di-desc' class='project-container' style="display:none">
+            Project Name : Document Indexing<br />
+            Description : A web based Document Indexing application that reads details from mails using Exchange API and
+            provides a web UI for batch processing<br />
+            Role: Web based batch document processing system with asynchronous persistence and Rich UI<br />
+            Requirement analysis, Architectural design and Development<br />
+            Product showcase and demos to the client, Product deployment and initial support<br />
+            Technologies: Dot Net, C#, Rest API, HTML, CSS3, JQuery, SQL Server<br />
+            Company : Infosys Limited<br /> Duration : Oct 2014 - Jan 2015
+         </div>
+         <div id='project-ewm-desc' class='project-container' style="display:none">
+            Project Name : E-Commerce Warehouse Management<br />
+            Description : A web based System to track and update inventory in an E-Commerce warehouse with dashboards
+            and live stats with elegant UI. Live reports using JQuery Charts<br />
+            Role:• Requirement analysis, Architectural design and Development<br />
+            Technologies: Dot Net, C#, Rest API, HTML, CSS3, JQuery, SQL Server<br />
+            Company : Infosys Limited (Internship)<br /> Duration : April 2014 - May 2014
+         </div>
+         <div id='project-kiit-desc' class='project-container' style="display:none">
+            Project Name : Web based Automated Attendance Management System<br />
+            Description : A web based system to record attendance and generate various reports for an Educational
+            Institution<br />
+            Technologies: PHP, MySQL, HTML5, CSS3, JavaScript, JQuery<br /> Duration: 03rd Semester Mini Project
+         </div>
+      </div>
+
+      <div id='carousel' style="display:none">
+         <ul class="language-icon-set">
+            <li>
+               <img src="/Images/algo.png" class="langauge-icon" />
+            </li>
+            <li>
+               <img src="/Images/android.png" class="langauge-icon" />
+            </li>
+            <li>
+               <img src="/Images/angular.png" class="langauge-icon" />
+            </li>
+            <li>
+               <img src="/Images/c.png" class="langauge-icon" />
+            </li>
+            <li>
+               <img src="/Images/cpp.png" class="langauge-icon" />
+            </li>
+            <li>
+               <img src="/Images/c-sharp.png" class="langauge-icon" />
+            </li>
+            <li>
+               <img src="/Images/css.png" class="langauge-icon" />
+            </li>
+            <li>
+               <img src="/Images/ds2.jpg" class="langauge-icon" />
+            </li>
+            <li>
+               <img src="/Images/html.png" class="langauge-icon" />
+            </li>
+         </ul>
+      </div>
+      <div id='carousel2' style="display:none">
+         <ul class="language-icon-set">
+            <li>
+               <img src="/Images/java.png" class="langauge-icon" />
+            </li>
+            <li>
+               <img src="/Images/javascript.png" class="langauge-icon" />
+            </li>
+            <li>
+               <img src="/Images/jquery.png" class="langauge-icon" />
+            </li>
+            <li>
+               <img src="/Images/ml2.png" class="langauge-icon" />
+            </li>
+            <li>
+               <img src="/Images/php.png" class="langauge-icon" />
+            </li>
+            <li>
+               <img src="/Images/python.png" class="langauge-icon" />
+            </li>
+            <li>
+               <img src="/Images/react.png" class="langauge-icon" />
+            </li>
+            <li>
+               <img src="/Images/sql.png" class="langauge-icon" />
+            </li>
+            <li>
+               <img src="/Images/system.png" class="langauge-icon" />
+            </li>
+         </ul>
+      </div>
+      <div id="expertise" class="main-container" style="display:none">
+         <ul id='expertise-list'>
+            <li id='e-language'>Programming Languages</li>
+            <li id='e-os'>Operating System</li>
+            <li id='e-tools'>Tools</li>
+            <li id='e-framework'>Frameworks</li>
+         </ul>
+         <div id='pl-container' style="display:none">
+
+            <div id="graph">
+               <ul class="y-axis">
                   <li> <span> 100% </span></li>
                   <li> <span> 80% </span></li>
                   <li> <span> 60% </span></li>
@@ -139,26 +295,26 @@
                   <li> <span> 20% </span></li>
                   <li> <span> 0% </span></li>
                </ul>
-               <ul class = "values">
-                  <li class = 'e60'> 60%</li>
-                  <li class = 'e50'> 50%</li>
-                  <li class = 'e80'> 80%</li>
-                  <li class = 'e60'> 60%</li>
-                  <li class = 'e30'> 30%</li>
-                  <li class = 'e50'> 50%</li>
-                  <li class = 'e80'> 80%</li>
-                  <li class = 'e70'> 70%</li>
-                  <li class = 'e75'> 75%</li>
-                  <li class = 'e70'> 70%</li>
-                  <li class = 'e60'> 60%</li>
-                  <li class = 'e30'> 30%</li>
-                  <li class = 'e50'> 50%</li>
-                  <li class = 'e30'> 30%</li>
-                  <li class = 'e60'> 60%</li>
-                  <li class = 'e30'> 30%</li>
-                  <li class = 'e30'> 30%</li>
+               <ul class="values">
+                  <li class='e60'> 60%</li>
+                  <li class='e50'> 50%</li>
+                  <li class='e80'> 80%</li>
+                  <li class='e60'> 60%</li>
+                  <li class='e50'> 50%</li>
+                  <li class='e50'> 50%</li>
+                  <li class='e80'> 80%</li>
+                  <li class='e70'> 70%</li>
+                  <li class='e75'> 75%</li>
+                  <li class='e70'> 70%</li>
+                  <li class='e60'> 60%</li>
+                  <li class='e60'> 60%</li>
+                  <li class='e70'> 70%</li>
+                  <li class='e30'> 30%</li>
+                  <li class='e60'> 60%</li>
+                  <li class='e30'> 30%</li>
+                  <li class='e30'> 30%</li>
                </ul>
-               <ul class = "x-axis">
+               <ul class="x-axis">
                   <li> <span> C </span></li>
                   <li> <span> C++ </span></li>
                   <li> <span> Java</span></li>
@@ -178,192 +334,216 @@
                   <li> <span> React</span></li>
                </ul>
             </div>
-            <div class="text-container">
-               I have good experience in coding in C, C# and Java. I have studied other mentioned languages. Learning Python is under progress :).
-               Amazed by the minimalism of the language. I am currently attending training on Machine Learning at SAP Labs. Exploring Android.
-               Have some experience in Angular. Planning to learn Angular 2 and React.
+         </div>
+         <div id='os-container' style="display:none">
+            <div id='os-icon-container'>
+               <ul id='os-icons'>
+                  <li>
+                     <img src="/Images/windows.png" class="os-icon" />
+                  </li>
+                  <li>
+                     <img src="/Images/android-os.png" class="os-icon" />
+                  </li>
+                  <li>
+                     <img src="/Images/linux.png" class="os-icon" />
+                  </li>
+                  <li>
+                     <img src="/Images/apple.png" class="os-icon" />
+                  </li>
+
+               </ul>
             </div>
          </div>
-         <div id = 'os-container' style="display:none">
-            <ul id = 'os-icons'>
-               <li>
-                  <img src = "/Images/windows.png" class= "os-icon"/>
-               </li>
-               <li class= "os-icon-displace1">
-                  <img src = "/Images/ubuntu.png" class= "os-icon"/>
-               </li>
-               <li class= "os-icon-displace2">
-                  <img src = "/Images/apple.png" class= "os-icon"/>
-               </li>
-               <li class= "os-icon-displace3">
-                  <img src = "/Images/android-os.png" class= "os-icon"/>
-               </li>
-            </ul>
-            <div id = 'os-graph'>
-               <figure id = 'os-windows' class="circle-chart animate">
-                  <svg role="img" xmlns="http://www.w3.org/2000/svg">
-                     <title>[title here]</title>
-                     <desc>[long description here]</desc>
-                     <circle class="circle-background"/>
-                     <circle class="circle-foreground"/>
-                  </svg>
-                  <figcaption>80%</figcaption>
-               </figure>
-               <figure id = 'os-ubuntu' class="circle-chart animate">
-                  <svg role="img" xmlns="http://www.w3.org/2000/svg">
-                     <title>[title here]</title>
-                     <desc>[long description here]</desc>
-                     <circle class="circle-background"/>
-                     <circle class="circle-foreground"/>
-                  </svg>
-                  <figcaption>60%</figcaption>
-               </figure>
-               <figure id = 'os-mac' class="circle-chart animate">
-                  <svg role="img" xmlns="http://www.w3.org/2000/svg">
-                     <title>[title here]</title>
-                     <desc>[long description here]</desc>
-                     <circle class="circle-background"/>
-                     <circle class="circle-foreground"/>
-                  </svg>
-                  <figcaption>40%</figcaption>
-               </figure>
-               <figure id = 'os-android' class="circle-chart animate">
-                  <svg role="img" xmlns="http://www.w3.org/2000/svg">
-                     <title>[title here]</title>
-                     <desc>[long description here]</desc>
-                     <circle class="circle-background"/>
-                     <circle class="circle-foreground"/>
-                  </svg>
-                  <figcaption>80%</figcaption>
-               </figure>
-            </div>
-            <div class="text-container">
-               I work mostly on a windows machine but I have some experience of working on Linux Machine as well. Macs, I love them but haven't worked on them much.
-               A big fan of Android OS, I admire the customization capbilities of it and love to explore them. Kudos to the android team :).
+
+         <div id="tools-container">
+            <div id='card-container'>
+
+               <div class='card'>
+                  <img src="/Images/eclipse.png" class="card-icon" />
+                  <div class='card-detail'>
+                     Eclipse
+                  </div>
+               </div>
+               <div class='card'>
+                  <img src="/Images/git.png" class="card-icon" />
+                  <div class='card-detail'>
+                     Git SCM
+                  </div>
+               </div>
+               <div class='card'>
+                  <img src="/Images/intellij-idea.png" class="card-icon" />
+                  <div class='card-detail'>
+                     IntelliJ Idea
+                  </div>
+               </div>
+               <div class='card'>
+                  <img src="/Images/github.png" class="card-icon" />
+                  <div class='card-detail'>
+                     GitHub
+                  </div>
+               </div>
+               <div class='card'>
+                  <img src="/Images/android-studio.png" class="card-icon" />
+                  <div class='card-detail'>
+                     Andorid Studio
+                  </div>
+               </div>
+               <div class='card'>
+                  <img src="/Images/adobe-after-effects.png" class="card-icon" />
+                  <div class='card-detail'>
+                     Adobe After Effects
+                  </div>
+               </div>
+               <div class='card'>
+                  <img src="/Images/postman.png" class="card-icon" />
+                  <div class='card-detail'>
+                     Postman
+                  </div>
+               </div>
+               <div class='card'>
+                  <img src="/Images/vscode.png" class="card-icon" />
+                  <div class='card-detail'>
+                     Visual Studio Code
+                  </div>
+               </div>
+               <div class='card'>
+                  <img src="/Images/chrome.png" class="card-icon" />
+                  <div class='card-detail'>
+                     Chrome
+                  </div>
+               </div>
+               <div class='card'>
+                  <img src="/Images/visual-studio.png" class="card-icon" />
+                  <div class='card-detail'>
+                     Visual Studio
+                  </div>
+               </div>
+               <div class='card'>
+                  <img src="/Images/PyCharm.png" class="card-icon" />
+                  <div class='card-detail'>
+                     PyCharm
+                  </div>
+               </div>
+               <div class='card'>
+                  <img src="/Images/Notepad_plus_plus.png" class="card-icon" />
+                  <div class='card-detail'>
+                     Notepad++
+                  </div>
+               </div>
+               <div class='card'>
+                  <img src="/Images/atlassian-logo.png" class="card-icon" />
+                  <div class='card-detail'>
+                     Jira, BitBucket
+                  </div>
+               </div>
+               <div class='card'>
+                  <img src="/Images/xampp.png" class="card-icon" />
+                  <div class='card-detail'>
+                     XAMPP
+                  </div>
+               </div>
+               <div class='card'>
+                  <img src="/Images/maven.png" class="card-icon" />
+                  <div class='card-detail'>
+                     Maven
+                  </div>
+               </div>
+               <div class='card'>
+                  <img src="/Images/anaconda.png" class="card-icon" />
+                  <div class='card-detail'>
+                     Anaconda for ML
+                  </div>
+               </div>
+
             </div>
          </div>
-        <div id = "tools-container">
-            <img src = "/Images/adobe-after-effects.png" class= "img-large"/>
-            <img src = "/Images/android-studio.png" class= "img-rectangular"/>
-            <img src = "/Images/eclipse.png" class= "img-large"/>
-            <img src = "/Images/git.png" class= "img-rectangular"/>
-            <img src = "/Images/xampp.png" class= "img-large"/>
-            <img src = "/Images/sublime.png" class= "img-large"/>
-            <img src = "/Images/brackets.png" class= "img-large"/>
-            <img src = "/Images/github.png" class= "img-rectangular"/>
-            <img src = "/Images/atom.png" class= "img-large"/>
-            <img src = "/Images/intellij.png" class= "img-rectangular"/>
-            <img src = "/Images/postman.png" class= "img-large"/>
-            <img src = "/Images/chrome.png" class= "img-large"/>
-            <img src = "/Images/mysql.png" class= "img-rectangular"/>
-            <img src = "/Images/PyCharm.png" class= "img-large"/>
-            <img src = "/Images/SQLServer.png" class= "img-large"/>   
-            <img src = "/Images/netbeans-ide-logo.png" class= "img-rectangular"/>
-            <img src = "/Images/Notepad_plus_plus.png" class= "img-large"/>
-                     
-            <img src = "/Images/visual-studio.png" class= "img-large"/>
-            <!-- <img src = "/Images/vscode.png" class= "img-large"/> -->
-            <div class="text-container">
-                I have worked mostly on Eclipse, IntelliJ, Visual studio and SQL Server for enterprise development. Also worked on Android Studio a bit for Android development.
+         <div id="frameworks-container">
+            <div id="fr-list-container">
+
+               <div class="hex-row">
+                  <div class="hex">
+                     <div class="top"></div>
+                     <div class="middle"><img src="/Images/spring-logo.png" class="hex-icon">
+                        <span>Spring</span></div>
+                     <div class="bottom"></div>
+                  </div>
+                  <div class="hex">
+                     <div class="top"></div>
+                     <div class="middle"><img src="/Images/struts-logo.png" class="hex-icon">
+                        <span>Struts</span>
+                     </div>
+                     <div class="bottom"></div>
+                  </div>
+                  <div class="hex">
+                     <div class="top"></div>
+                     <div class="middle"><img src="/Images/spirng-boot.png" class="hex-icon">
+                        <span>Springboot</span>
+                     </div>
+                     <div class="bottom"></div>
+                  </div>
+                  <div class="hex">
+                     <div class="top"></div>
+                     <div class="middle"><img src="/Images/angular-logo.png" class="hex-icon">
+                        <span>Angular</span>
+                     </div>
+                     <div class="bottom"></div>
+                  </div>
+               </div>
+               <div class="hex-row even">
+                  <div class="hex">
+                     <div class="top"></div>
+                     <div class="middle"><img src="/Images/bootstrap_logo.png" class="hex-icon">
+                        <span>Bootstrap</span></div>
+                     <div class="bottom"></div>
+                  </div>
+                  <div class="hex">
+                     <div class="top"></div>
+                     <div class="middle"><img src="/Images/node-js-logo.png" class="hex-icon">
+                        <span>Node JS</span></div>
+                     <div class="bottom"></div>
+                  </div>
+                  <div class="hex">
+                     <div class="top"></div>
+                     <div class="middle"><img src="/Images/jquery-logo.png" class="hex-icon">
+                        <span>Jquery</span></div>
+                     <div class="bottom"></div>
+                  </div>
+               </div>
+               <div class="hex-row">
+                  <div class="hex">
+                     <div class="top"></div>
+                     <div class="middle"><img src="/Images/dot-net-logo.png" class="hex-icon">
+                        <span>.Net MVC</span></div>
+                     <div class="bottom"></div>
+                  </div>
+                  <div class="hex">
+                     <div class="top"></div>
+                     <div class="middle"><img src="/Images/react-logo-new.png" class="hex-icon">
+                        <span>React</span></div>
+                     <div class="bottom"></div>
+                  </div>
+                  <div class="hex">
+                     <div class="top"></div>
+                     <div class="middle"><img src="/Images/gwt-logo.png" class="hex-icon">
+                        <span>GWT</span>
+                     </div>
+                     <div class="bottom"></div>
+                  </div>
+                  <div class="hex">
+                     <div class="top"></div>
+                     <div class="middle"><img src="/Images/hibernate-logo.png" class="hex-icon">
+                        <span>Hibernate</span></div>
+                     <div class="bottom"></div>
+                  </div>
+               </div>
             </div>
-        </div>
-        <div id = "frameworks-container">
-            <img src = "/Images/angularjs.png" class= "img-rectangular2"/>
-            <img src = "/Images/bootstrap.png" class= "img-large2"/>
-            <img src = "/Images/dotnet.png" class= "img-large2"/>
-            <img src = "/Images/dotnetmvc.png" class= "img-large2"/>
-            <img src = "/Images/react-logo.png" class= "img-large2"/>
-            <img src = "/Images/struts.png" class= "img-large2"/>  
-            <img src = "/Images/spring.png" class= "img-rectangular2"/>
-                     
-            <div class="text-container">
-                I have worked mostly on Struts and .Net MVC. Worked on angular and bootstrap a bit. Learning Angular 2 and react currently. Also doing POCs on bootstrap.
-            </div>
-        </div>
+         </div>
       </div>
-      <div id= "experience" class = "main-container" style="display:none">
-         <ul id = 'projectList'>
-            <li id = 'project-fg'>
-               <img src = "/Images/SAP_logo.png" class= "img"/>
-               <br/>
-               Fieldglass VMS<br/>
-               SAP Labs<br/>
-               Jan 2016 - Present
-            </li>
-            <li id = 'project-cdp'>
-               <img src = "/Images/infosys.png" class= "img"/>
-               <br/>
-               CDP Workflow<br/>
-               Infosys Limited<br/>
-               Feb 2015 - Nov 2015
-            </li>
-            <li id = 'project-di'>
-               <img src = "/Images/infosys.png" class= "img"/>
-               <br/>
-               Document Indexing<br/>
-               Infosys Limited<br/>
-               Oct 2014 - Jan 2015
-            </li>
-            <li id = 'project-ewm'>
-               <img src = "/Images/infosys.png" class= "img" />
-               <br/>
-               E-Commerce Warehouse Management<br/>
-               Infosys Limited<br/>
-               April 2014 - May 2014
-            </li>
-            <li id = 'project-kiit'>
-               <img src = "/Images/Kiit_logo.png" class= "img"/>
-               <br/>
-               Automated Attendance Management System<br/>
-               KIIT University<br/>
-               Semester Project
-            </li>
-         </ul>
-         <div id = 'project-fg-desc' class = 'project-container'>
-            Project Name : Fieldglass VMS<br/>
-            Description : A popular cloud based Vendor Management System based on J2EE with Struts Framework combined with customized Hibernate.
-            <br/>Role:	Requirement analysis, Business case development, Module development<br/>
-            Architectural changes, Performance improvement, Resolving bugs<br/>
-            Business understanding, Development of Analytical & Reporting tools<br/>
-            Build monitoring, Business case presentations, Strong deadline adherence
-            .<br/>
-            Technologies: Java, J2EE, Rest API, Web Services, HTML, CSS3, JQuery, JavaScript, Struts, Hibernate<br/>
-            Company : SAP Labs<br/> Duration : Jan 2016 - Present<br/>
-         </div>
-         <div id = 'project-cdp-desc' class = 'project-container' style = "display:none">
-            Project Name : CDP Workflow<br/>
-            Description : It provides a workflow to ease the process of document approval for insurance.<br/> Reads all details from email using Exchange API and connects to SharePoint System for processing<br/>
-            Role: Requirement analysis, Architectural design and Development<br/>
-            Client side scripting with SharePoint Web APIs, Email & Attachment processing with Exchange API<br/>
-            Regular client interactions, presentations and demos<br/>
-            Technologies: C#, Rest API, HTML, CSS3, JQuery, JavaScript, SharePoint<br/>
-            Company : Infosys Limited<br/> Duration : Feb 2015 - Nov 2015<br/>
-         </div>
-         <div id = 'project-di-desc' class = 'project-container' style = "display:none">
-            Project Name : Document Indexing<br/>
-            Description : A web based Document Indexing application that reads details from mails using Exchange API and provides a web UI for batch processing<br/>
-            Role: Web based batch document processing system with asynchronous persistence and Rich UI<br/>
-            Requirement analysis, Architectural design and Development<br/>
-            Product showcase and demos to the client, Product deployment and initial support<br/>
-            Technologies: Dot Net, C#, Rest API, HTML, CSS3, JQuery, SQL Server<br/>
-            Company : Infosys Limited<br/> Duration : Oct 2014 - Jan 2015
-         </div>
-         <div id = 'project-ewm-desc' class = 'project-container' style = "display:none">
-            Project Name : E-Commerce Warehouse Management<br/>
-            Description : A web based System to track and update inventory in an E-Commerce warehouse with dashboards and live stats with elegant UI. Live reports using JQuery Charts<br/>
-            Role:•	Requirement analysis, Architectural design and Development<br/>
-            Technologies: Dot Net, C#, Rest API, HTML, CSS3, JQuery, SQL Server<br/>
-            Company : Infosys Limited (Internship)<br/> Duration : April 2014 - May 2014
-         </div>
-         <div id = 'project-kiit-desc' class = 'project-container' style = "display:none">
-            Project Name : Web based Automated Attendance Management System<br/>
-            Description : A web based system to record attendance and generate various reports for an Educational Institution<br/>
-            Technologies: PHP, MySQL, HTML5, CSS3, JavaScript, JQuery<br/> Duration: 03rd Semester Mini Project
-         </div>
-      </div>
-      <div id= "hobbies" class = "main-container" style="display:none">
-         Oh, Didn't I tell you. I love doing so many things!!. Oh S**t! I didn't. The List is big. Be patient and here it goes : <br/>
-         <ul id = 'hobbiesList'>
+
+      <div id="hobbies" class="main-container" style="display:none">
+         I love doing so many things!!. The List is big. Be patient and here
+         goes the sticky notes... <br />
+         <ul id='hobbiesList'>
             <li>Coding is my Passion, Lets automate</li>
             <li>Music, Just turn the f***ing volume up</li>
             <li>A new gadget/technology, gotta learn about it :)</li>
@@ -371,7 +551,7 @@
             <li>Gonna kill for those amazing UIs</li>
             <li>Bike ride, lets get ready</li>
             <li>I just love cars, they are orgasmic. gosh who created those</li>
-            <li>Reading Books  and magazines, specially techincal ones</li>
+            <li>Reading Books and magazines, specially techincal ones</li>
             <li>Collecting Quotes. Wanna get inspired?? Maybe!!</li>
             <li>Watching Movies, Guess, The next Blockbuster.</li>
             <li>Playing games, specially Racing sims. keep them coming!!</li>
@@ -386,103 +566,372 @@
             <li>How things work???</li>
          </ul>
       </div>
-        <div id = "awards" class = "main-container" style="display:none">
-            <ul id = 'awards-list'>
-                <li> 
-                    <img src = "/Images/award2.png"/>
-                    <p>Honor Award in SAP Labs for Performance and Innovation</p>
-                 
-                </li>            
-                
-                <li>
-                    <img src = "/Images/award2.png"/>
-                     <p>Excellence Award in Infosys for Exceptional Performance</p>
-                </li>
-                <li>
-                    <img src = "/Images/award2.png"/>
-                    <p>
-                    Medal for being 3rd Branch Topper at KIIT University
-                    </p>
-                </li>
-                <li>
-                    <img src = "/Images/award2.png"/>
-                    <p>
-                    Medal for being School topper in 10th Standard
-                    </p>
-                </li>
-                <li>
-                    <img src = "/Images/award2.png"/>
-                    <p>
-                    Hackathon winner in SAP Labs for Machine Learning training selection
-                    </p>
-                </li>
-            </ul>
-            <div id ="note">
-                Disclaimer: All the certificates are created for graphical purpose using canva. These are not the original certificates.
+      <div id="awards" class="main-container" style="display:none">
+         <div id="ad1" class="award-detail">
+            <p>
+               Honor Award in SAP Labs for perfromance and innovation
+            </p>
+         </div>
+         <div id="ad2" class="award-detail">
+            <p>
+               Ranked in top 50 developers Dev Hackatohn in SAP Labs for Machine Learning training
+            </p>
+         </div>
+         <div id="ad3" class="award-detail">
+            <p>
+               Excellence Award in Infosys for Exceptional Performance
+            </p>
+         </div>
+         <div id="ad4" class="award-detail">
+            <p>
+               3rd MCA Branch topper in KIIT University with 9.03 CGPA
+            </p>
+         </div>
+         <div id="ad5" class="award-detail">
+            <div id="car">
+               <p>
+                  Now this, I have gifted to myself :)
+               </p>
             </div>
-        </div>
-        <div id = "awards-main-holder" style="display:none">
-           
-            <img id = "certi-1" class = "certificate" src = "/Images/School.png">           
-            <img id = "certi-2" class = "certificate" src = "/Images/KIIT University.png">
-            <img id = "certi-3" class = "certificate" src = "/Images/Infy.png">
-            <img id = "certi-4" class = "certificate" src = "/Images/SAP Labs.png">
-          
-            <img id ="medal-1" class = "medal" src = "/Images/medal-1.png">
-            <!-- <img id ="medal-2" class = "medal" src = "medal-1.png"> -->
-           
-           
-
-        </div>
-        <div id= "academics" class = "main-container" style = "display:none">
-                <div class="component">
-                        <ul class="align">
-                            <li>
-                                <figure class='book'>
-        
-                                    <!-- Front -->
-        
-                                    <ul class='hardcover_front'>
-                                        <li>
-                                            <div class="coverDesign blue">
-                                                <h1>Xth Result</h1>
-                                                <p>Pankaj Pathak</p>
-                                            </div>
-                                        </li>
-                                        <li></li>
-                                    </ul>
-        
-                                    <!-- Pages -->
-        
-                                    <ul class='page'>
-                                        <li></li>
-                                        <li>
-                                            Xth
-                                        </li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-        
-                                    <!-- Back -->
-        
-                                    <ul class='hardcover_back'>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-                                    <ul class='book_spine'>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>                                   
-                                </figure>
-                            </li>
-                        </ul>
-                    </div>
-                    
-            
-        </div>
-      <div id = "footer">
-         Copyright 2017  Pankaj Kumar. The Project is still in Beta. This website is designed without use of any plugins with pure CSS and JQuery. Only Material colors used. Best Viewed On Google Chrome.
+         </div>
+         <div id="ad6" class="award-detail">
+            <p>
+               School Topper in Xth std
+            </p>
+         </div>
       </div>
-   </body>
+
+      <div id="academics" class="main-container" style="display:none">
+
+         <div id="ac1" class="academic-detail">
+            <div class="ac-img-container">
+               <img src="/Images/10-icon.png" />
+            </div>
+            <div class="ac-detail-container">
+               Std: 10th<br />
+               Board: Jharkhand Academic Council<br />
+               Year of Passing: 2007<br />
+               Marks %: 73.4<br />
+            </div>
+         </div>
+         <div id="ac2" class="academic-detail">
+            <div class="ac-img-container">
+               <img src="/Images/12-icon.png" />
+            </div>
+            <div class="ac-detail-container">
+               Std: 12th<br />
+               Stream: Science<br />
+               Board: Jharkhand Academic Council<br />
+               Year of Passing: 2007<br />
+               Marks %: 64.6<br />
+            </div>
+         </div>
+         <div id="ac3" class="academic-detail">
+            <div class="ac-img-container">
+               <img src="/Images/smu-logo.png" />
+            </div>
+            <div class="ac-detail-container">
+               Degree: B.Sc-IT<br />
+               University: Sikkim Manipal University <br />
+               Year of Passing: 2010<br />
+               Marks %: 90.68<br />
+            </div>
+
+         </div>
+         <div id="ac4" class="academic-detail">
+            <div class="ac-img-container">
+               <img src="/Images/kiit-logo.png" />
+            </div>
+            <div class="ac-detail-container">
+               Degree: MCA<br />
+               University: KIIT University <br />
+               Year of Passing: 2014<br />
+               CGPA: 9.03<br />
+            </div>
+         </div>
+
+      </div>
+      <div id="inspiration" class="main-container" style="display:none">
+         <div class='horizontal-card hcard-odd'>
+            <img src="/Images/parents.jpg" class="horizontal-card-icon" />
+            <p class='horizontal-card-detail'>
+               <span class="heading">My Parents </span><br />
+               Hard working honest souls<br />
+               <span class="hcard-content">
+                  They have inspired me to be who I am today. I have learnt from their hardship and honesty. The most
+                  resilient people..
+               </span>
+            </p>
+         </div>
+         <div class='horizontal-card hcard-even'>
+            <img src="/Images/Albert-Einstein.jpg" class="horizontal-card-icon" />
+            <p class='horizontal-card-detail'>
+               <span class="heading">Albert Einstein</span><br />
+               Physicist<br />
+               <span class="hcard-content">
+                  A great inventor with contribution to both Physics and Philosophy. His quotes are amazing.
+               </span>
+            </p>
+         </div>
+         <div class='horizontal-card hcard-odd'>
+            <img src="/Images/leonardo-da-vinci.jpg" class="horizontal-card-icon" />
+            <p class='horizontal-card-detail'>
+               <span class="heading">Leonardo da Vinci</span><br />
+               Italian Polymath<br />
+               <span class="hcard-content">
+                  Amazed by his diverse areas of interests from Science, Astronomy, Maths, Engineering to Painting,
+                  Music and literature.
+               </span>
+            </p>
+         </div>
+         <div class='horizontal-card hcard-even'>
+            <img src="/Images/elon_musk.jpg" class="horizontal-card-icon" />
+            <p class='horizontal-card-detail'>
+               <span class="heading">Elon Musk </span><br />
+               Founder, Tesla and SpaceX<br />
+               <span class="hcard-content">
+                  Real life Iron Man. His true intellectual power is beyond imagination. I am a huge fan and admirer.
+               </span>
+            </p>
+         </div>
+         <div class='horizontal-card hcard-odd'>
+            <img src="/Images/iron-man.jpg" class="horizontal-card-icon" />
+            <p class='horizontal-card-detail'>
+               <span class="heading">Iron Man / Robert Downey Jr</span><br />
+               Marvel Character / Actor<br />
+               <span class="hcard-content">
+                  My favourite superhero. With all the tech and gizmo. Robert Downey Jr has made the character a legend.
+               </span>
+            </p>
+         </div>
+         <div class='horizontal-card hcard-even'>
+            <img src="/Images/jarvis.jpg" class="horizontal-card-icon" />
+            <p class='horizontal-card-detail'>
+               <span class="heading">Jarvis</span><br />
+               Iron Man's AI assistant<br />
+               <span class="hcard-content">
+                  Got me fascinated about AI and HUDs design. Shows the true power of AI. Remember that scence disection
+                  from the movie!!
+               </span>
+            </p>
+         </div>
+         <div class='horizontal-card hcard-odd'>
+            <img src="/Images/dennis-ritchie.jpg" class="horizontal-card-icon" />
+            <p class='horizontal-card-detail'>
+               <span class="heading">Dennis Ritchie</span><br />
+               Creator of C language / Unix<br />
+               <span class="hcard-content">
+                  Creator of one of the most popular programming languages on earth.
+                  Unix, The OS that created the base.
+               </span>
+            </p>
+         </div>
+         <div class='horizontal-card hcard-even'>
+            <img src="/Images/james-gosling.jpg" class="horizontal-card-icon" />
+            <p class='horizontal-card-detail'>
+               <span class="heading">James Gosling</span><br />
+               Father of Java language<br />
+               <span class="hcard-content">
+                  One of my favourite langauges and most used enterprise development languages. Love the portability and
+                  readability.
+               </span>
+            </p>
+         </div>
+         <div class='horizontal-card hcard-odd'>
+            <img src="/Images/steve-jobs.jpg" class="horizontal-card-icon" />
+            <p class='horizontal-card-detail'>
+               <span class="heading">Steve Jobs</span><br />
+               Apple co-founder<br />
+               <span class="hcard-content">
+                  An innovator, thinker and designer. Way ahead of his time. He was the pioneer of mobile computing.
+               </span>
+            </p>
+         </div>
+         <div class='horizontal-card hcard-even'>
+            <img src="/Images/google-cofounders.jpg" class="horizontal-card-icon" />
+            <p class='horizontal-card-detail'>
+               <span class="heading">Larry Page/Sergey Brin</span><br />
+               Google founders<br />
+               <span class="hcard-content">
+                  People who has revolutionized the use of internet. An innovation that changed the world of
+                  information.
+               </span>
+            </p>
+         </div>
+         <div class='horizontal-card hcard-odd'>
+            <img src="/Images/shahrukh-khan.jpg" class="horizontal-card-icon" />
+            <p class='horizontal-card-detail'>
+               <span class="heading">Shahrukh Khan</span><br />
+               King of Bollywood<br />
+               <span class="hcard-content">
+                  My favourite hero. An intellectual, down to earth and witty person. King of romance as they all say.
+               </span>
+            </p>
+         </div>
+         <div class='horizontal-card hcard-even'>
+            <img src="/Images/linus-torvalds.jpg" class="horizontal-card-icon" />
+            <p class='horizontal-card-detail'>
+               <span class="heading">Linus Torvalds</span><br />
+               Creator of Linux abd Git <br />
+               <span class="hcard-content">
+                  A tech geek and innovator. An OS that basically runs the world on. A hugely popular SCM (git).
+               </span>
+            </p>
+         </div>
+         <div class='horizontal-card hcard-odd'>
+            <img src="/Images/nikola-tesla.jpeg" class="horizontal-card-icon" />
+            <p class='horizontal-card-detail'>
+               <span class="heading">Nikola Tesla</span><br />
+               Scientist/Inventor<br />
+               <span class="hcard-content">
+                  A futurist inventor of electricity and the first alternating current (AC) motor that powers most
+                  battery operated vehicle.
+               </span>
+            </p>
+         </div>
+         <div class='horizontal-card hcard-even'>
+            <img src="/Images/Srinivasa-Ramanujan.jpg" class="horizontal-card-icon" />
+            <p class='horizontal-card-detail'>
+               <span class="heading">Srinivasa Ramanujan</span><br />
+               Mathematician<br />
+               <span class="hcard-content">
+                  A mathematical genius. A prodigy. Being from a small village what he has achieved is remarkable.
+               </span>
+            </p>
+         </div>
+         <div class='horizontal-card hcard-odd'>
+            <img src="/Images/Abdul-Kalam.jpg" class="horizontal-card-icon" />
+            <p class='horizontal-card-detail'>
+               <span class="heading">A.P.J. Abdul Kalam</span><br />
+               Scientist/Author<br />
+               <span class="hcard-content">
+                  A humble, down to earth genius person whose journey of life has been extraordinary.
+               </span>
+            </p>
+         </div>
+
+      </div>
+      <div id="blog" style="display:none">
+         Oh!! nothing here now. Just working on my writting skills for a while...
+      </div>
+      <div id="contact" class="main-container" style="display:none">
+         <div id="contact-container">
+            <div id="contact-left">
+               <a href="https://www.linkedin.com/in/pankaj-pathak-1011/" target="_blank">
+                  <div class="social-contact">
+                     <img src="/Images/linkedin-logo.png" />
+                  </div>
+               </a>
+               <a href="https://github.com/princepankaj/" target="_blank">
+                  <div class="social-contact">
+                     <img src="/Images/github-logo.png" />
+                  </div>
+               </a>
+               <div class="social-contact" onclick="displayMessage('contactNo');">
+                  <img src="/Images/phone-icon.png" />
+               </div>
+               <a href="https://www.quora.com/profile/Pankaj-Pathak-9/" target="_blank">
+                  <div class="social-contact">
+                     <img src="/Images/quora-logo.png" />
+                  </div>
+               </a>
+               <a href="https://www.reddit.com/user/pankaj1011jsr" target="_blank">
+                  <div class="social-contact">
+                     <img src="/Images/reddit-logo.png" />
+                  </div>
+               </a>
+               <div class="social-contact" onclick="displayMessage('whatsapp');">
+                  <img src="/Images/whastapp-logo.png" />
+               </div>
+               <div id="left-message" class="message">
+                  <p id="contactNo">Contact me on 7276406202</p>
+                  <p id="whatsapp">Whatsapp me on 7276406202</p>
+               </div>
+            </div>
+            <div id="photo-container">
+               <div id="photo">
+                  <img src="/Images/profile_pic.jpg" class="photo-img" />
+               </div>
+               <div id="resume-link-container">
+
+                  <a href="https://www.hackerrank.com/princepankaj" target="_blank">
+                     <div class="social-contact">
+                        <img src="/Images/hackerrank-logo.png" />
+                     </div>
+                  </a>
+                  <a href="./PDF/Resume.pdf" target="_blank">
+                     <div class="social-contact">
+                        <img src="/Images/resume.png" />
+                     </div>
+                  </a>
+                  <a href="https://leetcode.com/pankaj1011/" target="_blank">
+                     <div class="social-contact">
+                        <img src="/Images/leetcode-logo.png" />
+                     </div>
+                  </a>
+               </div>
+            </div>
+
+            <div id="contact-right">
+               <a href="https://www.instagram.com/pankaj1011me/" target="_blank">
+                  <div class="social-contact">
+                     <img src="/Images/instagram-logo.png" />
+                  </div>
+               </a>
+               <a href="https://in.pinterest.com/pankaj1011jsr/" target="_blank">
+                  <div class="social-contact">
+                     <img src="/Images/pinterest-logo.png" />
+                  </div>
+               </a>
+               <a href="https://twitter.com/pankaj1011jsr" target="_blank">
+                  <div class="social-contact">
+                     <img src="/Images/twitter-logo.png" />
+                  </div>
+               </a>
+               <div class="social-contact" onclick="displayMessage('facebook');">
+                  <img src="/Images/facebook-logo.png" />
+               </div>
+               <div class="social-contact" onclick="displayMessage('gmail');">
+                  <img src="/Images/gmail-logo.png" />
+               </div>
+               <div class="social-contact" onclick="displayMessage('location');">
+                  <img src="/Images/maps-logo.png" />
+               </div>
+               <div id="right-message" class="message">
+                  <p id="gmail">Contact me on pankaj1011jsr@gmail.com</p>
+                  <p id="facebook">Facebook Account not active</p>
+                  <p id="location">Bangalore, India</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="footer">
+         <div id="play-pause-container">
+            <ul>
+               <li id="btnPlay" class="control">
+                  Play
+               </li>
+               <li id="btnPause" class="control">
+                  Pause
+               </li>
+            </ul>
+         </div>
+         <div id="footer_msg">Copyright 2020 Pankaj Kumar Pathak. @Beta, @Experimental. Best viewed on Google Chrome.
+            All the images, videos and logos used are under CC license obtained from various online resources.
+
+         </div>
+         <div id="prev-next-container">
+            <ul>
+               <li id="btnPrev" class="control">
+                  Prev
+               </li>
+               <li id="btnNext" class="control">
+                  Next
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</body>
+
 </html>
