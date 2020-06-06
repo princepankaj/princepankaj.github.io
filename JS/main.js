@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     var count = 0;
     var materialColors = ['#F44336', '#FFEBEE', '#FFCDD2', '#EF9A9A', '#E57373', '#EF5350', '#F44336', '#E53935', '#D32F2F', '#C62828', '#B71C1C', '#FF8A80', '#FF5252',
@@ -20,18 +21,14 @@ $(document).ready(function () {
         '#F5F5F5', '#EEEEEE', '#E0E0E0', '#BDBDBD', '#9E9E9E', '#757575', '#616161', '#424242', '#212121', '#607D8B', '#ECEFF1', '#CFD8DC', '#B0BEC5', '#90A4AE', '#78909C',
         '#607D8B', '#546E7A', '#455A64', '#37474F', '#263238', '#000000', '#FFFFFF'
     ];
+    var colorArray = [
+        "#f44336", "#E91E63", "#9C27B0", "#673AB7", "#3F51B5", "#2196F3", "#03A9F4", "#00BCD4", "#009688", "#4CAF50", "#8BC34A",
+        "#CDDC39", "#FFEB3B", "#FFEB3B", "#FFC107", "#FF9800", "#FF5722", "#795548", "#607D8B", "#000000", "#FFFFFF"];
 
-    var animations = ["bounce", "flash", "pulse", "rubberBand", "shake", "headShake", "swing", "tada", "wobble", "jello", "bounceIn", "bounceInDown", "bounceInLeft", "bounceInRight", "bounceInUp",
-        "bounceOut", "bounceOutDown", "bounceOutLeft", "bounceOutRight", "bounceOutUp", "fadeIn", "fadeInDown", "fadeInDownBig", "fadeInLeft", "fadeInLeftBig", "fadeInRight", "fadeInRightBig",
-        "fadeInUp", "fadeInUpBig", "fadeOut", "fadeOutDown", "fadeOutDownBig", "fadeOutLeft", "fadeOutLeftBig", "fadeOutRight", "fadeOutRightBig", "fadeOutUp", "fadeOutUpBig", "flip", "flipInX",
-        "flipInY", "flipOutX", "flipOutY", "lightSpeedIn", "lightSpeedOut", "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight", "rotateOut", "rotateOutDownLeft",
-        "rotateOutDownRight", "rotateOutUpLeft", "rotateOutUpRight", "hinge", "jackInTheBox", "rollIn", "rollOut", "zoomIn", "zoomInDown", "zoomInLeft", "zoomInRight", "zoomInUp", "zoomOut", "zoomOutDown",
-        "zoomOutLeft", "zoomOutRight", "zoomOutUp", "slideInDown", "slideInLeft", "slideInRight", "slideInUp", "slideOutDown", "slideOutLeft", "slideOutRight", "slideOutUp"
-    ];
-
-    animateWelcomeMessage();
+    //animateWelcomeMessage();
+    $('#welcome').fadeIn(2000);
     var currentVideoFileIndex = 0;
-    var videoFileIndexSize = 34;
+    var videoFileIndexSize = 44;
 
     //Video playback control start
 
@@ -70,8 +67,6 @@ $(document).ready(function () {
             }
         }
         setTimeout(function () {
-            // var index = Math.floor(Math.random() * 42);
-            console.log(currentVideoFileIndex);
             var source = document.getElementById('video-source');
             source.setAttribute('src', 'Media/background-' + currentVideoFileIndex + '.mp4');
 
@@ -87,37 +82,9 @@ $(document).ready(function () {
 
     var animationInterval;
 
-    function animateWelcomeMessage() {
-
-        var $all_msg = $('#welcome_msg');
-        //get a list of letters from the welcome text
-        var $wordList = $('#welcome_msg').text().split("");
-        //clear the welcome text msg
-        $('#welcome_msg').text("");
-        $('#welcome_msg').fadeIn();
-        //loop through the letters in the $wordList array
-        $.each($wordList, function (idx, elem) {
-            //create a span for the letter and set opacity to 0
-            var newEL = $("<span/>").text(elem).css({
-                opacity: 0
-            });
-            //append it to the welcome message
-            newEL.appendTo($all_msg);
-            //set the delay on the animation for this element
-            newEL.delay(idx * 10);
-            //animate the opacity back to full 1
-            newEL.animate({
-                opacity: 1
-            }, 1000);
-        });
-    }
-
     function animateHobbies() {
-        var index = Math.floor(Math.random() * animations.length);
         var elements = $('#hobbiesList').children();
         $.each(elements, function (idx, element) {
-            // var x = Math.floor(Math.random() * 1400);
-            // var y = Math.floor(Math.random() * 350);
             //var randomColor = Math.floor(Math.random()*16777215).toString(16);
             var indexColor = Math.floor(Math.random() * materialColors.length);
             $(element).css({
@@ -127,7 +94,7 @@ $(document).ready(function () {
     }
 
     function hideEverything() {
-        $('#welcome_msg').hide();
+        $('#welcome').hide();
         $('#expertise').hide();
         $('#experience').hide();
         $('#hobbies').hide();
@@ -151,22 +118,20 @@ $(document).ready(function () {
         $(this).removeClass('button');
         $(this).addClass('active-button');
         if (this.id === 'btnHome') {
-            var elements = $('#welcome_msg').children();
-            $.each(elements, function (idx, element) {
-                $(element).css({
-                    color: '#ffffff'
-                });
-            });
-            $('#welcome_msg').fadeIn();
+            $('#welcome').fadeIn();
         } else if (this.id === 'btnExpertise') {
             $('#expertise').fadeIn();
             $('#expertise-list').siblings().hide();
             $('#carousel').fadeIn();
             $('#carousel2').fadeIn();
             $('#pl-container').fadeIn();
+            $('#expertise-list li').removeClass('active-section');
+            $('#expertise-list li:first').addClass('active-section');
         } else if (this.id === 'btnExperience') {
             $('#projectList').siblings().hide();
             $('#experience').fadeIn();
+            $('#projectList li').removeClass('active-section');
+            $('#projectList li:first').addClass('active-section');
             $('#project-dell-desc').fadeIn();
 
         } else if (this.id === 'btnHobbies') {
@@ -201,6 +166,8 @@ $(document).ready(function () {
     });
 
     $('#projectList li').click(function () {
+        $('#projectList li').removeClass('active-section');
+        $(this).addClass('active-section');
         $(this).parent().siblings().hide();
         if (this.id === 'project-dell') {
             $('#project-dell-desc').fadeIn();
@@ -220,12 +187,10 @@ $(document).ready(function () {
 
     });
 
-    var colorArray = [
-        "#f44336", "#E91E63", "#9C27B0", "#673AB7", "#3F51B5", "#2196F3", "#03A9F4", "#00BCD4", "#009688", "#4CAF50", "#8BC34A",
-        "#CDDC39", "#FFEB3B", "#FFEB3B", "#FFC107", "#FF9800", "#FF5722", "#795548", "#607D8B", "#000000", "#FFFFFF"];
-
     $('#expertise-list li').click(function () {
         $(this).parent().siblings().hide();
+        $('#expertise-list li').removeClass('active-section');
+        $(this).addClass('active-section');
         if (this.id === 'e-language') {
             $('#pl-container').fadeIn();
         } else if (this.id === 'e-os') {
@@ -263,26 +228,10 @@ $(document).ready(function () {
     var animateFlag = true;
     var interval2;
 
-    $('#welcome_msg').click(function () {
-        if (animateFlag) {
-            animateText();
-            interval2 = window.setInterval(animateText, 3000);
-        } else {
-            clearInterval(interval2);
-            interval2 = 0;
-            var elements = $('#welcome_msg').children();
-            $.each(elements, function (idx, element) {
-                $(element).css({
-                    color: '#ffffff'
-                });
-            });
-        }
-        animateFlag = !animateFlag;
-    });
+    setInterval(displayQuotes, 10000);
 
     function animateText() {
-        var index = Math.floor(Math.random() * animations.length);
-        var elements = $('#welcome_msg').children();
+        var elements = $('.home-detail').children();
         var randomColor = Math.floor(Math.random() * materialColors.length);
         $.each(elements, function (idx, element) {
             $(element).css({
@@ -290,8 +239,36 @@ $(document).ready(function () {
             });
         });
     }
+    $('#slide-career-1').addClass('active-career-slide');
+    $('#slide-career-1').fadeIn();
+    $('#slide-exp-1').addClass('active-career-slide');
+    $('#slide-exp-1').fadeIn();
+    var slides = $('#career-slides').children();
+    slideShow(slides);
+    var slides = $('#exp-slides').children();
+    slideShow(slides);
+
 });
 
+function slideShow(slides) {
+    var totalSlides = slides.length;
+    var id_as = 1;
+    var prevEle;
+    setInterval(function () {
+        if (id_as == slides.length) {
+            id_as = 0;
+        }
+        prevEle = $('.active-career-slide');
+        $(prevEle).fadeOut(1000);
+        $(prevEle).promise().done(function () {
+            $(prevEle).removeClass('active-career-slide');
+            $(slides[id_as])
+                .fadeIn(1000);
+            $(slides[id_as]).addClass('active-career-slide');
+            id_as++;
+        });
+    }, 5000);
+}
 
 function displayMessage(message) {
     $('.message').hide();
@@ -312,4 +289,24 @@ function displayMessage(message) {
         $('#right-message').show();
         $('#location').fadeIn('fast').delay(2000).fadeOut('fast');
     }
+}
+
+function displayQuotes() {
+    var colors = ['#81C784', '#CDDC39', '#FFEB3B', '#FFCA28',
+        '#FFB74D', '#EEEEEE', '#FFFFFF'];
+    var qi1 = Math.floor(Math.random() * quotes.length);
+    var qi2 = Math.floor(Math.random() * quotes.length);
+    var colorIndex = Math.floor(Math.random() * colors.length);
+    $('#qc1').fadeOut();
+    $('#qc2').fadeOut();
+    setTimeout(function () {
+        console.log(colors[colorIndex]);
+        $('.quote-container').css({
+            'color': colors[colorIndex]
+        });
+        $('#qc1').text(quotes[qi1]);
+        $('#qc1').fadeIn();
+        $('#qc2').text(quotes[qi2]);
+        $('#qc2').fadeIn();
+    }, 2000);
 }
