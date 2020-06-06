@@ -420,9 +420,9 @@ body {
 #projectList li {
 	font-size: 11px;
 	float: left;
-	width: 160px;
-	height: 160px;
-	margin-left: 40px;
+	width: 11%;
+    height: 100%;
+	margin-left: 3%;
 	text-align: center;
 	box-sizing: border-box;
 	border-radius: 5%;
@@ -882,13 +882,14 @@ body {
 
 #hobbiesList {
 	list-style: none;
-	margin-left: 2%;
+    /* margin-left: 2%; */
+    padding: 0;
 	;
 }
 
 #hobbiesList li {
 	float: left;
-	width: 140px;
+	width: 10%;
 	height: 140px;
 	padding-top: 1%;
 	text-align: center;
@@ -980,7 +981,7 @@ body {
 
 .academic-detail {
 	float: left;
-	width: 220px;
+	width: 14%;
 	height: 320px;
 	border: 15px inset #424242;
 	box-shadow: 5px 5px 3px black;
@@ -1115,7 +1116,7 @@ body {
 
 .horizontal-card {
 	display: inline-block;
-	width: 250px;
+	width: 16%;
 	height: 125px;
 	margin-left: 3%;
 	margin-top: 2%;
